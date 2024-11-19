@@ -52,8 +52,6 @@ menuSections.forEach(section => {
     // Create new list item and link elements
     const menuItem = document.createElement('li');
     const linkElement = document.createElement('a');
-    
-    
 
     // Add the menu__link class to the link elements
     linkElement.classList.add('menu__link');
