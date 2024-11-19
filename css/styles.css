@@ -90,6 +90,21 @@ section {
     border-radius: 5px;
 }
 
+/* Navigation styles */
+#navbar__list { 
+    display: flex; 
+    justify-content: space-around; 
+    list-style-type: none; 
+    padding: 0; margin: 0; 
+}
+
+/* Style for the active navigation link */
+.nav-active {
+    font-weight: bold;
+    color: red;
+    background-color: rgb(229, 240, 131);
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -195,17 +210,19 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
+section.active {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    font-weight: bold;
+    color: red;
 }
 
-section.your-active-class .landing__container::before {
+section.active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
