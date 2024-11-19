@@ -86,6 +86,7 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+    border-radius: 5px;
 }
 
 /* Header Styles */
