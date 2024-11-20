@@ -48,6 +48,7 @@ p {
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
+    padding-top: 80px;
 }
 
 .main-hero {
@@ -95,14 +96,28 @@ section {
     display: flex; 
     justify-content: space-around; 
     list-style-type: none; 
-    padding: 0; margin: 0; 
+    padding: 0;
+    margin: 0;
 }
 
 /* Style for the active navigation link */
-.nav-active {
+li.nav-active .menu__link {
     font-weight: bold;
     color: red;
     background-color: rgb(229, 240, 131);
+}
+
+/* Media query for screens smaller than 360px */
+@media (max-width: 360px) {
+    #navbar__list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+    .menu__link {
+        display: block; /* Ensure full-width clickable links */
+        width: 100%;
+        padding: 15px;
+    }
 }
 
 /* Header Styles */
